@@ -7,6 +7,6 @@ package com.wsn.mybatis.task;
 public class AppStarter {
     public static void main(String[] args) {
 
-        
+
     }
 }
