@@ -1,0 +1,29 @@
+server:
+  port: 10086
+spring:
+  datasource:
+    name: mybatis-test
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mybatis-test?useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    druid:
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: select 'x'
+      validation-query-timeout: 2000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      max-evictable-idle-time-millis: 1800000
+      filters: stat
+mybatis:
+  mapper-locations: classpath:**/mapper/*.xml
+security:
+  basic:
+    enabled: false
